@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kalkulator Konversi Pesanan</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <div class="card">
+      <h1>Kalkulator Konversi Pesanan</h1>
+      <p class="subtitle">Otomatis menghitung kebutuhan bag berdasarkan konversi & kelipatan</p>
+
+      <!-- BAGIAN INPUT -->
+      <div class="form-group">
+        <label for="permintaan">Permintaan (KG)</label>
+        <input type="number" id="permintaan" min="0" step="any" placeholder="Contoh: 25" />
+      </div>
+
+      <div class="row-2">
+        <div class="form-group">
+          <label for="konversi">Konversi </label>
+          <input type="number" id="konversi" min="0" step="any" placeholder="Contoh: 2" />
+        </div>
+
+        <div class="form-group">
+          <label for="kelipatan">Kelipatan </label>
+          <input type="number" id="kelipatan" min="1" step="1" value="1" placeholder="Default: 1" />
+        </div>
+      </div>
+
+      <!-- BAGIAN HASIL OTOMATIS -->
+      <div class="result-box">
+        <div class="result-main">
+          <div class="result-item">
+            <span class="result-label">Hasil Dipesan</span>
+            <strong class="result-value" id="hasil-bag">0 <span></span></strong>
+          </div>
+          <div class="divider"></div>
+          <div class="result-item">
+            <span class="result-label">Total Berat Aktual</span>
+            <strong class="result-value" id="total-kg">0 <span>KG</span></strong>
+          </div>
+        </div>
+
+        <p class="detail-info" id="detail-hitungan">
+          Masukkan angka Permintaan dan Konversi untuk mulai menghitung.
+        </p>
+      </div>
+
+      <!-- TOMBOL RESET -->
+      <button type="button" id="btn-reset" class="btn-reset">Reset</button>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
